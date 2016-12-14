@@ -1,0 +1,711 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Reproducible Research</title>
+  <link rel="stylesheet" type="text/css" href="../CRAN_web.css" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="citation_title" content="CRAN Task View: Reproducible Research" />
+  <meta name="citation_author" content="Max Kuhn, Ben Marwick" />
+  <meta name="citation_publication_date" content="2016-12-14" />
+  <meta name="citation_public_url" content="https://CRAN.R-project.org/view=ReproducibleResearch" />
+  <meta name="DC.title" content="CRAN Task View: Reproducible Research" />
+  <meta name="DC.creator" content="Max Kuhn, Ben Marwick" />
+  <meta name="DC.issued" content="2016-12-14" />
+  <meta name="DC.identifier" content="https://CRAN.R-project.org/view=ReproducibleResearch" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Reproducible Research</h2>
+  <table summary="ReproducibleResearch task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Max Kuhn, Ben Marwick</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x6d;&#x61;&#x78;&#x2e;&#x6b;&#x75;&#x68;&#x6e;&#x20;&#x61;&#x74;&#x20;&#x70;&#x66;&#x69;&#x7a;&#x65;&#x72;&#x2e;&#x63;&#x6f;&#x6d;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2016-12-14</td></tr>
+    <tr><td valign="top"><b>URL:</b></td><td><a href="https://CRAN.R-project.org/view=ReproducibleResearch">https://CRAN.R-project.org/view=ReproducibleResearch</a></td></tr>
+  </table>
+
+    <div>
+      <p>
+        This Task View contains information about R packages that can be used for reproducible research. The base version of R does not ship with many tools for reproducible research Thankfully, there are an increasingly large number of tools contributed by the community, and we aim to list many of them here.
+      </p>
+      <p>
+        If you have any comments or suggestions for additions or improvements for this Task View, go to GitHub and
+        <a href="https://github.com/topepo/Reproducible-Research-ctv/issues">
+          submit an issue
+        </a>, or make some changes to
+<tt>ReproducibeResearch.md</tt>
+        and
+        <a href="https://github.com/topepo/Reproducible-Research-ctv/pulls">
+          submit a pull request
+        </a>. Please read our
+        <a href="https://github.com/topepo/Reproducible-Research-ctv/CONTRIBUTING.md">
+          guide to contributors
+        </a>
+        before making a pull request. If you can't contribute on GitHub,
+        <a href="mailto:max.kuhn@pfizer.com">
+          send Max an email
+        </a>. If you have an issue with one of the packages discussed below, please contact the maintainer of that package.
+      </p>
+      <p>
+        The goal of reproducible research is to tie specific instructions to data analysis and experimental data so that scholarship can be recreated, better understood and verified. Packages in R for this purpose can be split into groups for: literate programming, package reproducibility, code/data formatting tools, format converters, and object caching.
+      </p>
+      <h1 id="literate-programming">
+        Literate Programming
+      </h1>
+      <p>
+        The primary way that R facilitates reproducible research is using a document that is a combination of content and data analysis code. The
+<tt>Sweave</tt>
+        function (in the base R utils package) and the
+<a href="../packages/knitr/index.html">knitr</a>
+        package can be used to blend the subject matter and R code so that a single document defines the content and the analysis. The
+<a href="../packages/brew/index.html">brew</a>
+        and
+<a href="../packages/R.rsp/index.html">R.rsp</a>
+        packages contain alternative approaches to embedding R code into various markups.
+      </p>
+      <p>
+        The resources for literate programming are best organized by the document type/markup language:
+      </p>
+      <h2 id="latex">
+        LaTeX
+      </h2>
+      <p>
+        Both
+<tt>Sweave</tt>
+        and
+<a href="../packages/knitr/index.html">knitr</a>
+        can process LaTeX files.
+<a href="../packages/lazyWeave/index.html">lazyWeave</a>
+        can create LaTeX documents from scratch.
+      </p>
+      <p>
+        Object Conversion Functions:
+      </p>
+      <ul>
+        <li>
+          <em>
+            summary tables/statistics
+          </em>:
+<a href="../packages/Hmisc/index.html">Hmisc</a>,
+<a href="../packages/NMOF/index.html">NMOF</a>,
+<a href="../packages/papeR/index.html">papeR</a>,
+<a href="../packages/quantreg/index.html">quantreg</a>,
+<a href="../packages/rapport/index.html">rapport</a>,
+<a href="../packages/reporttools/index.html">reporttools</a>,
+<a href="../packages/sparktex/index.html">sparktex</a>,
+<a href="../packages/tables/index.html">tables</a>,
+<a href="../packages/xtable/index.html">xtable</a>,
+<a href="../packages/ztable/index.html">ztable</a>
+        </li>
+        <li>
+          <em>
+            tables/cross-tabulations
+          </em>:
+<a href="../packages/compareGroups/index.html">compareGroups</a>,
+<a href="../packages/Hmisc/index.html">Hmisc</a>,
+<a href="../packages/lazyWeave/index.html">lazyWeave</a>,
+<a href="../packages/knitLatex/index.html">knitLatex</a>,
+<a href="../packages/knitr/index.html">knitr</a>,
+<a href="../packages/reporttools/index.html">reporttools</a>,
+<a href="../packages/ztable/index.html">ztable</a>
+        </li>
+        <li>
+          <em>
+            graphics
+          </em>:
+<a href="../packages/animation/index.html">animation</a>,
+<a href="../packages/Hmisc/index.html">Hmisc</a>,
+<tt>grDevices:::pictex</tt>,
+<a href="../packages/sparktex/index.html">sparktex</a>,
+<a href="../packages/tikzDevice/index.html">tikzDevice</a>
+        </li>
+        <li>
+          <em>
+            statistical models/methods
+          </em>:
+<a href="../packages/apsrtable/index.html">apsrtable</a>,
+<a href="../packages/memisc/index.html">memisc</a>,
+<a href="../packages/quantreg/index.html">quantreg</a>,
+<a href="../packages/r2lh/index.html">r2lh</a>,
+<a href="../packages/rms/index.html">rms</a>,
+<a href="../packages/stargazer/index.html">stargazer</a>,
+<a href="../packages/suRtex/index.html">suRtex</a>,
+<a href="../packages/TeachingSampling/index.html">TeachingSampling</a>,
+<a href="../packages/texreg/index.html">texreg</a>,
+<a href="../packages/xtable/index.html">xtable</a>,
+<a href="../packages/ztable/index.html">ztable</a>
+        </li>
+        <li>
+          <em>
+            bibtex
+          </em>:
+<a href="../packages/bibtex/index.html">bibtex</a>
+          and
+<a href="../packages/RefManageR/index.html">RefManageR</a>
+        </li>
+        <li>
+          <em>
+            others
+          </em>:
+<a href="../packages/latex2exp/index.html">latex2exp</a>
+          converts LaTeX equations to
+<tt>plotmath</tt>
+          expressions.
+        </li>
+      </ul>
+      <p>
+        Miscellaneous Tools
+      </p>
+      <ul>
+        <li>
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          contains a function to correctly escape special characters.
+<a href="../packages/resumer/index.html">resumer</a>
+          creates resumes. Standardized exams can be created using the
+<a href="../packages/exams/index.html">exams</a>
+          package.
+        </li>
+      </ul>
+      <h2 id="html">
+        HTML
+      </h2>
+      <p>
+        The
+<a href="../packages/knitr/index.html">knitr</a>
+        package can process HTML files directly.
+<tt>Sweave</tt>
+        can also work with HTML by way of the
+<a href="../packages/R2HTML/index.html">R2HTML</a>
+        package.
+<a href="../packages/Kmisc/index.html">Kmisc</a>
+        and
+<a href="../packages/lazyWeave/index.html">lazyWeave</a>
+        can create HTML format documents from scratch.
+      </p>
+      <p>
+        Object Conversion Functions:
+      </p>
+      <ul>
+        <li>
+          <em>
+            summary tables/statistics
+          </em>:
+<a href="../packages/stargazer/index.html">stargazer</a>
+        </li>
+        <li>
+          <em>
+            tables/cross-tabulations
+          </em>:
+<a href="../packages/compareGroups/index.html">compareGroups</a>,
+<a href="../packages/DT/index.html">DT</a>,
+<a href="../packages/formattable/index.html">formattable</a>,
+<a href="../packages/htmlTable/index.html">htmlTable</a>,
+<a href="../packages/HTMLUtils/index.html">HTMLUtils</a>,
+<a href="../packages/hwriter/index.html">hwriter</a>,
+<a href="../packages/Kmisc/index.html">Kmisc</a>,
+<a href="../packages/knitr/index.html">knitr</a>,
+<a href="../packages/lazyWeave/index.html">lazyWeave</a>,
+<a href="../packages/SortableHTMLTables/index.html">SortableHTMLTables</a>,
+<a href="../packages/texreg/index.html">texreg</a>,
+<a href="../packages/ztable/index.html">ztable</a>
+        </li>
+        <li>
+          <em>
+            statistical models/methods
+          </em>:
+<a href="../packages/r2lh/index.html">r2lh</a>,
+<a href="../packages/rapport/index.html">rapport</a>,
+<a href="../packages/stargazer/index.html">stargazer</a>,
+<a href="../packages/xtable/index.html">xtable</a>
+        </li>
+        <li>
+          <em>
+            others
+          </em>:
+<a href="../packages/knitcitations/index.html">knitcitations</a>,
+<a href="../packages/RefManageR/index.html">RefManageR</a>
+        </li>
+      </ul>
+      <p>
+        Miscellaneous Tools:
+<a href="../packages/htmltools/index.html">htmltools</a>
+        has various tools for working with HTML.
+<a href="../packages/tufterhandout/index.html">tufterhandout</a>
+        and
+<a href="../packages/tufte/index.html">tufte</a>
+        provide templates for creating Tufte-style handouts
+      </p>
+      <h2 id="markdown">
+        Markdown
+      </h2>
+      <p>
+        The
+<a href="../packages/knitr/index.html">knitr</a>
+        package can process markdown files without assistance into HTML, Microsoft Word, and PDF files. The packages
+<a href="../packages/markdown/index.html">markdown</a>
+        and
+<a href="../packages/rmarkdown/index.html">rmarkdown</a>
+        have general tools for working with documents in markdown.
+<a href="../packages/Kmisc/index.html">Kmisc</a>
+        and
+<a href="../packages/lazyWeave/index.html">lazyWeave</a>
+        can create markdown format documents from scratch. Also, the
+<a href="../packages/ascii/index.html">ascii</a>
+        package can write R objects to the
+        <a href="http://www.methods.co.nz/asciidoc/">
+          AsciiDoc
+        </a>
+        format.
+      </p>
+      <p>
+        Tools for writing markdown documents:
+      </p>
+      <ul>
+        <li>
+<a href="../packages/bookdown/index.html">bookdown</a>
+          allows for the production of multi-part documents (such as books) or single file documents (such as reports or articles). It has functions for figure and table captioning and cross-referencing, and citation handling.
+        </li>
+        <li>
+<a href="../packages/rticles/index.html">rticles</a>
+          provides for manuscripts and reports. It includes several popular journal manuscript templates
+<br/>
+        </li>
+        <li>
+<a href="../packages/tufterhandout/index.html">tufterhandout</a>
+          and
+<a href="../packages/tufte/index.html">tufte</a>
+          contain templates and functions for creating Tufte-style handouts.
+        </li>
+        <li>
+<a href="../packages/papaja/index.html">papaja</a>
+          (
+          <a href="https://github.com/crsh/papaja">
+            GitHub only
+          </a>) provides functions and templates for writing according to the American Psychological Association (APA) manuscript guidelines
+        </li>
+        <li>
+<a href="../packages/captioner/index.html">captioner</a>
+          and
+<a href="../packages/kfigr/index.html">kfigr</a>
+          provide functions for figure and table captions and cross-referencing in rmarkdown documents.
+        </li>
+      </ul>
+      <p>
+        Object Conversion Functions:
+      </p>
+      <ul>
+        <li>
+          <em>
+            summary tables/statistics
+          </em>:
+<a href="../packages/papeR/index.html">papeR</a>
+        </li>
+        <li>
+          <em>
+            tables/cross-tabulations
+          </em>:
+<a href="../packages/DT/index.html">DT</a>,
+<a href="../packages/formattable/index.html">formattable</a>,
+<a href="../packages/htmlTable/index.html">htmlTable</a>,
+<a href="../packages/knitr/index.html">knitr</a>,
+<a href="../packages/Kmisc/index.html">Kmisc</a>,
+<a href="../packages/lazyWeave/index.html">lazyWeave</a>,
+<a href="../packages/papeR/index.html">papeR</a>
+        </li>
+        <li>
+          <em>
+            statistical models/methods
+          </em>:
+<a href="../packages/pander/index.html">pander</a>,
+<a href="../packages/papeR/index.html">papeR</a>,
+<a href="../packages/rapport/index.html">rapport</a>,
+<a href="../packages/texreg/index.html">texreg</a>
+        </li>
+        <li>
+          <em>
+            others
+          </em>:
+<a href="../packages/RefManageR/index.html">RefManageR</a>
+        </li>
+      </ul>
+      <h2 id="opendocument-format-odf">
+        OpenDocument Format (ODF)
+      </h2>
+      <p>
+        The
+<a href="../packages/odfWeave/index.html">odfWeave</a>
+        package can process ODF files.
+      </p>
+      <p>
+        Object Conversion Functions:
+      </p>
+      <ul>
+        <li>
+          <em>
+            tables/cross-tabulations
+          </em>:
+<a href="../packages/odfWeave/index.html">odfWeave</a>
+        </li>
+        <li>
+          <em>
+            statistical models/methods
+          </em>:
+<a href="../packages/odfWeave.survey/index.html">odfWeave.survey</a>,
+<a href="../packages/rapport/index.html">rapport</a>
+        </li>
+      </ul>
+      <h2 id="microsoft-formats">
+        Microsoft Formats
+      </h2>
+      <p>
+        The
+<a href="../packages/ReporteRs/index.html">ReporteRs</a>
+        (formerly R2DOCX) package can create
+<tt>docx</tt>
+        and
+<tt>pptx</tt>
+        files.
+<a href="../packages/R2wd/index.html">R2wd</a>
+        (windows only) can also create Word documents from scratch and
+<a href="../packages/R2PPT/index.html">R2PPT</a>
+        (also windows only) can create PowerPoint slides. The
+<a href="../packages/rtf/index.html">rtf</a>
+        package does the same for Rich Text Format documents.
+      </p>
+      <p>
+        Object Conversion Functions:
+      </p>
+      <ul>
+        <li>
+          <em>
+            tables/cross-tabulations
+          </em>:
+<a href="../packages/apaStyle/index.html">apaStyle</a>
+        </li>
+      </ul>
+      <h1 id="computational-environments">
+        Computational Environments
+      </h1>
+      <p>
+        For capturing the computational environment of an analysis,
+        <a href="https://github.com/rocker-org/">
+          rocker
+        </a>
+        is a project that provides Docker containers to run R in a lightweight, isolated virtual environment.
+      </p>
+      <p>
+        The package
+<a href="../packages/harbor/index.html">harbor</a>
+        (
+        <a href="https://github.com/wch/harbor">
+          GitHub only
+        </a>) provides functions for controlling docker containers on local and remote hosts.
+<a href="../packages/analogsea/index.html">analogsea</a>
+        has functions for deploying R and RStudio quickly &amp; easily on DigitalOcean clusters using Docker images for cloud computing. The
+<a href="../packages/dockertest/index.html">dockertest</a>
+        (
+        <a href="https://github.com/traitecoevo/dockertest">
+          GitHub only
+        </a>) and
+<a href="../packages/containerit/index.html">containerit</a>
+        (
+        <a href="https://github.com/o2r-project/containerit">
+          GitHub only
+        </a>) packages contains functions for generating Dockerfiles from R packages and other R projects, and building Docker containers that contains all the package dependencies.
+      </p>
+      <h1 id="miscellaneous-tools">
+        Miscellaneous Tools
+      </h1>
+      <h2 id="workflow-reproducibility">
+        Workflow Reproducibility
+      </h2>
+      <p>
+<a href="../packages/remake/index.html">remake</a>
+        (
+        <a href="https://github.com/richfitz/remakepackage">
+          GitHub only
+        </a>) allows you to write makefile-like files entirely within R, to manage complex workflows reproducibly.
+      </p>
+      <h2 id="package-reproducibility">
+        Package Reproducibility
+      </h2>
+      <p>
+        R also has tools for ensuring that specific packages versions can be required for analyses.
+<a href="../packages/packrat/index.html">packrat</a>,
+<a href="../packages/checkpoint/index.html">checkpoint</a>,
+<a href="../packages/rbundler/index.html">rbundler</a>, and
+<a href="../packages/GRANBase/index.html">GRANBase</a>
+        install packages required for a project to a local archive as they existed at a specified point in time. This allows specific package versions to be maintained over time and different users. The
+<a href="../packages/miniCRAN/index.html">miniCRAN</a>
+        and
+<a href="../packages/drat/index.html">drat</a>
+        packages facilitate the creation of local CRAN-like repositories.
+      </p>
+      <h2 id="formatting-tools">
+        Formatting Tools
+      </h2>
+      <p>
+<a href="../packages/formatR/index.html">formatR</a>,
+<a href="../packages/highlight/index.html">highlight</a>,
+<a href="../packages/highr/index.html">highr</a>, and
+<a href="../packages/SweaveListingUtils/index.html">SweaveListingUtils</a>
+        can be used to color and/or format R code.
+      </p>
+      <p>
+        Packages
+<a href="../packages/humanFormat/index.html">humanFormat</a>,
+<a href="../packages/lubridate/index.html">lubridate</a>,
+<a href="../packages/prettyunits/index.html">prettyunits</a>, and
+<a href="../packages/rprintf/index.html">rprintf</a>
+        have functions to better format data.
+      </p>
+      <h2 id="format-convertors">
+        Format Convertors
+      </h2>
+      <p>
+<a href="../packages/pander/index.html">pander</a>
+        can be used for rendering R objects into
+        <a href="http://pandoc.org/">
+          Pandoc's
+        </a>
+        markdown.
+<a href="../packages/knitr/index.html">knitr</a>
+        has the function
+<tt>pandoc</tt>
+        that can call an installed version of
+        <a href="http://pandoc.org/">
+          Pandoc
+        </a>
+        to convert documents between formats such as Markdown, HTML, LaTeX, PDF and Word.
+<a href="../packages/tth/index.html">tth</a>
+        facilitates TeX to HTML/MathML conversions. LaTeX to Rich Text Format conversions can be done using the
+<a href="../packages/connect3/index.html">connect3</a>
+        package.
+      </p>
+      <h2 id="object-caching-packages">
+        Object Caching Packages
+      </h2>
+      <p>
+        When using
+<tt>Sweave</tt>
+        and
+<a href="../packages/knitr/index.html">knitr</a>
+        it can be advantageous to
+        <em>
+          cache
+        </em>
+        the results of time consuming code chunks if the document will be re-processed (i.e. during debugging).
+<a href="../packages/knitr/index.html">knitr</a>
+        facilitates object caching and the Bioconductor package
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/weaver.html"><span class="BioC">weaver</span></a>
+        can be used with
+<tt>Sweave</tt>.
+      </p>
+      <p>
+        Non-literate programming packages to facilitating caching/archiving are
+<a href="../packages/R.cache/index.html">R.cache</a>
+        and
+<a href="../packages/archivist/index.html">archivist</a>.
+      </p>
+      <h1 id="related-links">
+        Related links
+      </h1>
+      <ul>
+        <li>
+          <a href="http://www.statistik.uni-muenchen.de/~leisch/Sweave/">
+            The Sweave Homepage
+          </a>
+        </li>
+        <li>
+          <a href="http://yihui.name/knitr/">
+            knitr: Elegant, flexible and fast dynamic report generation with R
+          </a>
+        </li>
+        <li>
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/weaver.html"><span class="BioC">weaver</span></a>
+        </li>
+        <li>
+          <a href="http://en.wikipedia.org/wiki/Literate_Programming">
+            Wikipedia: Literate Programming
+          </a>
+        </li>
+        <li>
+          <a href="http://biostat.mc.vanderbilt.edu/wiki/Main/StatReport">
+            Harrell: Site for Reproducible Research
+          </a>
+        </li>
+        <li>
+          <a href="http://www.econ.uiuc.edu/~roger/research/repro/">
+            Koenker, Zeileis: On Reproducible Econometric Research
+          </a>
+        </li>
+        <li>
+          <a href="http://biostatistics.oxfordjournals.org/cgi/reprint/10/3/405">
+            Peng: Reproducible Research and Biostatistics
+          </a>
+        </li>
+        <li>
+          <a href="http://www.bepress.com/uwbiostat/paper194/">
+            Rossini, Leisch: Literate Statistical Practice
+          </a>
+        </li>
+        <li>
+          <a href="http://dx.doi.org/10.1214/09-AOAS291">
+            Baggerly, Coombes: Deriving Chemosensitivity from Cell Lines: Forensic Bioinformatics and Reproducible Research in High-Throughput Biology
+          </a>
+        </li>
+        <li>
+          <a href="http://www.R-project.org/doc/Rnews/Rnews_2002-3.pdf">
+            Leisch: Sweave, Part I: Mixing R and LaTeX
+          </a>
+        </li>
+        <li>
+          <a href="http://www.R-project.org/doc/Rnews/Rnews_2003-2.pdf">
+            Leisch: Sweave, Part II: Package Vignettes
+          </a>
+        </li>
+        <li>
+          <a href="http://www.R-project.org/doc/Rnews/Rnews_2005-1.pdf">
+            Betebenner: Using Control Structures with Sweave
+          </a>
+          <a href="http://www.R-project.org/doc/Rnews/Rnews_2006-2.pdf">
+            Garbade, Burgard: Using R/Sweave in Everyday Clinical Practice
+          </a>
+        </li>
+        <li>
+          <a href="http://www.R-project.org/doc/Rnews/Rnews_2006-4.pdf">
+            Kuhn: Sweave and the Open Document Format The odfWeave Package
+          </a>
+        </li>
+        <li>
+          <a href="http://www.R-project.org/doc/Rnews/Rnews_2008-1.pdf">
+            Gorjanc: Using Sweave with LyX
+          </a>
+        </li>
+        <li>
+          <a href="http://www.R-project.org/doc/Rnews/Rnews_2003-3.pdf">
+            Lecoutre: The R2HTML Package
+          </a>
+        </li>
+        <li>
+          <a href="http://rmarkdown.rstudio.com/">
+            RStudio: The rmarkdown package
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/christophergandrud/Rep-Res-Book">
+            Gandrud: Reproducible Research with R/RStudio
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/yihui/knitr-book">
+            Xie: Dynamic Documents with R and knitr
+          </a>
+        </li>
+        <li>
+          <a href="http://dx.doi.org/10.5334/jors.ay">
+            Stodden, Miguez: Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/analogsea/index.html">analogsea</a></li>
+    <li><a href="../packages/animation/index.html">animation</a></li>
+    <li><a href="../packages/apaStyle/index.html">apaStyle</a></li>
+    <li><a href="../packages/apsrtable/index.html">apsrtable</a></li>
+    <li><a href="../packages/archivist/index.html">archivist</a></li>
+    <li><a href="../packages/ascii/index.html">ascii</a></li>
+    <li><a href="../packages/bibtex/index.html">bibtex</a></li>
+    <li><a href="../packages/bookdown/index.html">bookdown</a></li>
+    <li><a href="../packages/brew/index.html">brew</a></li>
+    <li><a href="../packages/captioner/index.html">captioner</a></li>
+    <li><a href="../packages/checkpoint/index.html">checkpoint</a></li>
+    <li><a href="../packages/compareGroups/index.html">compareGroups</a></li>
+    <li><a href="../packages/connect3/index.html">connect3</a></li>
+    <li><a href="../packages/containerit/index.html">containerit</a></li>
+    <li><a href="../packages/dockertest/index.html">dockertest</a></li>
+    <li><a href="../packages/drat/index.html">drat</a></li>
+    <li><a href="../packages/DT/index.html">DT</a></li>
+    <li><a href="../packages/exams/index.html">exams</a></li>
+    <li><a href="../packages/formatR/index.html">formatR</a></li>
+    <li><a href="../packages/formattable/index.html">formattable</a></li>
+    <li><a href="../packages/GRANBase/index.html">GRANBase</a></li>
+    <li><a href="../packages/harbor/index.html">harbor</a></li>
+    <li><a href="../packages/highlight/index.html">highlight</a></li>
+    <li><a href="../packages/highr/index.html">highr</a></li>
+    <li><a href="../packages/Hmisc/index.html">Hmisc</a></li>
+    <li><a href="../packages/htmlTable/index.html">htmlTable</a></li>
+    <li><a href="../packages/htmltools/index.html">htmltools</a></li>
+    <li><a href="../packages/HTMLUtils/index.html">HTMLUtils</a></li>
+    <li><a href="../packages/httr/index.html">httr</a> (core)</li>
+    <li><a href="../packages/humanFormat/index.html">humanFormat</a></li>
+    <li><a href="../packages/hwriter/index.html">hwriter</a></li>
+    <li><a href="../packages/jsonlite/index.html">jsonlite</a> (core)</li>
+    <li><a href="../packages/kfigr/index.html">kfigr</a></li>
+    <li><a href="../packages/Kmisc/index.html">Kmisc</a></li>
+    <li><a href="../packages/knitcitations/index.html">knitcitations</a></li>
+    <li><a href="../packages/knitLatex/index.html">knitLatex</a></li>
+    <li><a href="../packages/knitr/index.html">knitr</a></li>
+    <li><a href="../packages/latex2exp/index.html">latex2exp</a></li>
+    <li><a href="../packages/lazyWeave/index.html">lazyWeave</a></li>
+    <li><a href="../packages/lubridate/index.html">lubridate</a></li>
+    <li><a href="../packages/markdown/index.html">markdown</a></li>
+    <li><a href="../packages/memisc/index.html">memisc</a></li>
+    <li><a href="../packages/miniCRAN/index.html">miniCRAN</a></li>
+    <li><a href="../packages/NMOF/index.html">NMOF</a></li>
+    <li><a href="../packages/odfWeave/index.html">odfWeave</a></li>
+    <li><a href="../packages/odfWeave.survey/index.html">odfWeave.survey</a></li>
+    <li><a href="../packages/packrat/index.html">packrat</a></li>
+    <li><a href="../packages/pander/index.html">pander</a></li>
+    <li><a href="../packages/papaja/index.html">papaja</a></li>
+    <li><a href="../packages/papeR/index.html">papeR</a></li>
+    <li><a href="../packages/prettyunits/index.html">prettyunits</a></li>
+    <li><a href="../packages/quantreg/index.html">quantreg</a></li>
+    <li><a href="../packages/R.cache/index.html">R.cache</a></li>
+    <li><a href="../packages/R.rsp/index.html">R.rsp</a></li>
+    <li><a href="../packages/R2HTML/index.html">R2HTML</a></li>
+    <li><a href="../packages/r2lh/index.html">r2lh</a></li>
+    <li><a href="../packages/R2PPT/index.html">R2PPT</a></li>
+    <li><a href="../packages/R2wd/index.html">R2wd</a></li>
+    <li><a href="../packages/rapport/index.html">rapport</a></li>
+    <li><a href="../packages/rbundler/index.html">rbundler</a></li>
+    <li><a href="../packages/RCurl/index.html">RCurl</a> (core)</li>
+    <li><a href="../packages/RefManageR/index.html">RefManageR</a></li>
+    <li><a href="../packages/remake/index.html">remake</a></li>
+    <li><a href="../packages/ReporteRs/index.html">ReporteRs</a></li>
+    <li><a href="../packages/reporttools/index.html">reporttools</a></li>
+    <li><a href="../packages/resumer/index.html">resumer</a></li>
+    <li><a href="../packages/rmarkdown/index.html">rmarkdown</a></li>
+    <li><a href="../packages/rms/index.html">rms</a></li>
+    <li><a href="../packages/rprintf/index.html">rprintf</a></li>
+    <li><a href="../packages/rtf/index.html">rtf</a></li>
+    <li><a href="../packages/rticles/index.html">rticles</a></li>
+    <li><a href="../packages/shiny/index.html">shiny</a> (core)</li>
+    <li><a href="../packages/SortableHTMLTables/index.html">SortableHTMLTables</a></li>
+    <li><a href="../packages/sparktex/index.html">sparktex</a></li>
+    <li><a href="../packages/stargazer/index.html">stargazer</a></li>
+    <li><a href="../packages/suRtex/index.html">suRtex</a></li>
+    <li><a href="../packages/SweaveListingUtils/index.html">SweaveListingUtils</a></li>
+    <li><a href="../packages/tables/index.html">tables</a></li>
+    <li><a href="../packages/TeachingSampling/index.html">TeachingSampling</a></li>
+    <li><a href="../packages/texreg/index.html">texreg</a></li>
+    <li><a href="../packages/tikzDevice/index.html">tikzDevice</a></li>
+    <li><a href="../packages/tth/index.html">tth</a></li>
+    <li><a href="../packages/tufte/index.html">tufte</a></li>
+    <li><a href="../packages/tufterhandout/index.html">tufterhandout</a></li>
+    <li><a href="../packages/XML/index.html">XML</a> (core)</li>
+    <li><a href="../packages/xtable/index.html">xtable</a></li>
+    <li><a href="../packages/ztable/index.html">ztable</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li><a href="https://github.com/topepo/Reproducible-Research-ctv">
+  Reproducible Research TaskView on GitHub
+</a></li>
+  </ul>
+
+</body>
+</html>
