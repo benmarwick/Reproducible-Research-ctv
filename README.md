@@ -8,7 +8,7 @@ CRAN Task View: Reproducible Research
 |-----------------|--------------------------------------------------------|
 | **Maintainer:** | Max Kuhn, Ben Marwick                                  |
 | **Contact:**    | max.kuhn at pfizer.com                                 |
-| **Version:**    | 2016-12-14                                             |
+| **Version:**    | 2016-12-15                                             |
 | **URL:**        | <https://CRAN.R-project.org/view=ReproducibleResearch> |
 
 This Task View contains information about R packages that can be used for reproducible research. The base version of R does not ship with many tools for reproducible research Thankfully, there are an increasingly large number of tools contributed by the community, and we aim to list many of them here.
@@ -61,14 +61,6 @@ Markdown
 
 The [knitr](http://cran.rstudio.com/web/packages/knitr/index.html) package can process markdown files without assistance into HTML, Microsoft Word, and PDF files. The packages [markdown](http://cran.rstudio.com/web/packages/markdown/index.html) and [rmarkdown](http://cran.rstudio.com/web/packages/rmarkdown/index.html) have general tools for working with documents in markdown. [Kmisc](http://cran.rstudio.com/web/packages/Kmisc/index.html) and [lazyWeave](http://cran.rstudio.com/web/packages/lazyWeave/index.html) can create markdown format documents from scratch. Also, the [ascii](http://cran.rstudio.com/web/packages/ascii/index.html) package can write R objects to the [AsciiDoc](http://www.methods.co.nz/asciidoc/) format.
 
-Tools for writing markdown documents:
-
--   [bookdown](http://cran.rstudio.com/web/packages/bookdown/index.html) allows for the production of multi-part documents (such as books) or single file documents (such as reports or articles). It has functions for figure and table captioning and cross-referencing, and citation handling.
--   [rticles](http://cran.rstudio.com/web/packages/rticles/index.html) provides for manuscripts and reports. It includes several popular journal manuscript templates
--   [tufterhandout](http://cran.rstudio.com/web/packages/tufterhandout/index.html) and [tufte](http://cran.rstudio.com/web/packages/tufte/index.html) contain templates and functions for creating Tufte-style handouts.
--   [papaja](http://cran.rstudio.com/web/packages/papaja/index.html) ([GitHub only](https://github.com/crsh/papaja)) provides functions and templates for writing according to the American Psychological Association (APA) manuscript guidelines
--   [captioner](http://cran.rstudio.com/web/packages/captioner/index.html) and [kfigr](http://cran.rstudio.com/web/packages/kfigr/index.html) provide functions for figure and table captions and cross-referencing in rmarkdown documents.
-
 Object Conversion Functions:
 
 -   *summary tables/statistics*: [papeR](http://cran.rstudio.com/web/packages/papeR/index.html)
@@ -95,25 +87,13 @@ Object Conversion Functions:
 
 -   *tables/cross-tabulations*: [apaStyle](http://cran.rstudio.com/web/packages/apaStyle/index.html)
 
-Computational Environments
-==========================
-
-For capturing the computational environment of an analysis, [rocker](https://github.com/rocker-org/) is a project that provides Docker containers to run R in a lightweight, isolated virtual environment.
-
-The package [harbor](http://cran.rstudio.com/web/packages/harbor/index.html) ([GitHub only](https://github.com/wch/harbor)) provides functions for controlling docker containers on local and remote hosts. [analogsea](http://cran.rstudio.com/web/packages/analogsea/index.html) has functions for deploying R and RStudio quickly & easily on DigitalOcean clusters using Docker images for cloud computing. The [dockertest](http://cran.rstudio.com/web/packages/dockertest/index.html) ([GitHub only](https://github.com/traitecoevo/dockertest)) and [containerit](http://cran.rstudio.com/web/packages/containerit/index.html) ([GitHub only](https://github.com/o2r-project/containerit)) packages contains functions for generating Dockerfiles from R packages and other R projects, and building Docker containers that contains all the package dependencies.
-
 Miscellaneous Tools
 ===================
-
-Workflow Reproducibility
-------------------------
-
-[remake](http://cran.rstudio.com/web/packages/remake/index.html) ([GitHub only](https://github.com/richfitz/remakepackage)) allows you to write makefile-like files entirely within R, to manage complex workflows reproducibly.
 
 Package Reproducibility
 -----------------------
 
-R also has tools for ensuring that specific packages versions can be required for analyses. [packrat](http://cran.rstudio.com/web/packages/packrat/index.html), [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html), [rbundler](http://cran.rstudio.com/web/packages/rbundler/index.html), and [GRANBase](http://cran.rstudio.com/web/packages/GRANBase/index.html) install packages required for a project to a local archive as they existed at a specified point in time. This allows specific package versions to be maintained over time and different users. The [miniCRAN](http://cran.rstudio.com/web/packages/miniCRAN/index.html) and [drat](http://cran.rstudio.com/web/packages/drat/index.html) packages facilitate the creation of local CRAN-like repositories.
+R also has tools for ensuring that specific packages versions can be required for analyses. [packrat](http://cran.rstudio.com/web/packages/packrat/index.html), [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html), [rbundler](http://cran.rstudio.com/web/packages/rbundler/index.html) install packages required for a project to a local archive as they existed at a specified point in time. This allows specific package versions to be maintained over time and different users. [miniCRAN](http://cran.rstudio.com/web/packages/miniCRAN/index.html) facilitates the creation of local CRAN-like repositories.
 
 Formatting Tools
 ----------------
@@ -152,35 +132,23 @@ Related links
 -   [Kuhn: Sweave and the Open Document Format The odfWeave Package](http://www.R-project.org/doc/Rnews/Rnews_2006-4.pdf)
 -   [Gorjanc: Using Sweave with LyX](http://www.R-project.org/doc/Rnews/Rnews_2008-1.pdf)
 -   [Lecoutre: The R2HTML Package](http://www.R-project.org/doc/Rnews/Rnews_2003-3.pdf)
--   [RStudio: The rmarkdown package](http://rmarkdown.rstudio.com/)
--   [Gandrud: Reproducible Research with R/RStudio](https://github.com/christophergandrud/Rep-Res-Book)
--   [Xie: Dynamic Documents with R and knitr](https://github.com/yihui/knitr-book)
--   [Stodden, Miguez: Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research](http://dx.doi.org/10.5334/jors.ay)
 
 ### CRAN packages:
 
--   [analogsea](http://cran.rstudio.com/web/packages/analogsea/index.html)
 -   [animation](http://cran.rstudio.com/web/packages/animation/index.html)
 -   [apaStyle](http://cran.rstudio.com/web/packages/apaStyle/index.html)
 -   [apsrtable](http://cran.rstudio.com/web/packages/apsrtable/index.html)
 -   [archivist](http://cran.rstudio.com/web/packages/archivist/index.html)
 -   [ascii](http://cran.rstudio.com/web/packages/ascii/index.html)
 -   [bibtex](http://cran.rstudio.com/web/packages/bibtex/index.html)
--   [bookdown](http://cran.rstudio.com/web/packages/bookdown/index.html)
 -   [brew](http://cran.rstudio.com/web/packages/brew/index.html)
--   [captioner](http://cran.rstudio.com/web/packages/captioner/index.html)
 -   [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html)
 -   [compareGroups](http://cran.rstudio.com/web/packages/compareGroups/index.html)
 -   [connect3](http://cran.rstudio.com/web/packages/connect3/index.html)
--   [containerit](http://cran.rstudio.com/web/packages/containerit/index.html)
--   [dockertest](http://cran.rstudio.com/web/packages/dockertest/index.html)
--   [drat](http://cran.rstudio.com/web/packages/drat/index.html)
 -   [DT](http://cran.rstudio.com/web/packages/DT/index.html)
 -   [exams](http://cran.rstudio.com/web/packages/exams/index.html)
 -   [formatR](http://cran.rstudio.com/web/packages/formatR/index.html)
 -   [formattable](http://cran.rstudio.com/web/packages/formattable/index.html)
--   [GRANBase](http://cran.rstudio.com/web/packages/GRANBase/index.html)
--   [harbor](http://cran.rstudio.com/web/packages/harbor/index.html)
 -   [highlight](http://cran.rstudio.com/web/packages/highlight/index.html)
 -   [highr](http://cran.rstudio.com/web/packages/highr/index.html)
 -   [Hmisc](http://cran.rstudio.com/web/packages/Hmisc/index.html)
@@ -191,7 +159,6 @@ Related links
 -   [humanFormat](http://cran.rstudio.com/web/packages/humanFormat/index.html)
 -   [hwriter](http://cran.rstudio.com/web/packages/hwriter/index.html)
 -   [jsonlite](http://cran.rstudio.com/web/packages/jsonlite/index.html) (core)
--   [kfigr](http://cran.rstudio.com/web/packages/kfigr/index.html)
 -   [Kmisc](http://cran.rstudio.com/web/packages/Kmisc/index.html)
 -   [knitcitations](http://cran.rstudio.com/web/packages/knitcitations/index.html)
 -   [knitLatex](http://cran.rstudio.com/web/packages/knitLatex/index.html)
@@ -207,7 +174,6 @@ Related links
 -   [odfWeave.survey](http://cran.rstudio.com/web/packages/odfWeave.survey/index.html)
 -   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html)
 -   [pander](http://cran.rstudio.com/web/packages/pander/index.html)
--   [papaja](http://cran.rstudio.com/web/packages/papaja/index.html)
 -   [papeR](http://cran.rstudio.com/web/packages/papeR/index.html)
 -   [prettyunits](http://cran.rstudio.com/web/packages/prettyunits/index.html)
 -   [quantreg](http://cran.rstudio.com/web/packages/quantreg/index.html)
@@ -221,7 +187,6 @@ Related links
 -   [rbundler](http://cran.rstudio.com/web/packages/rbundler/index.html)
 -   [RCurl](http://cran.rstudio.com/web/packages/RCurl/index.html) (core)
 -   [RefManageR](http://cran.rstudio.com/web/packages/RefManageR/index.html)
--   [remake](http://cran.rstudio.com/web/packages/remake/index.html)
 -   [ReporteRs](http://cran.rstudio.com/web/packages/ReporteRs/index.html)
 -   [reporttools](http://cran.rstudio.com/web/packages/reporttools/index.html)
 -   [resumer](http://cran.rstudio.com/web/packages/resumer/index.html)
@@ -229,7 +194,6 @@ Related links
 -   [rms](http://cran.rstudio.com/web/packages/rms/index.html)
 -   [rprintf](http://cran.rstudio.com/web/packages/rprintf/index.html)
 -   [rtf](http://cran.rstudio.com/web/packages/rtf/index.html)
--   [rticles](http://cran.rstudio.com/web/packages/rticles/index.html)
 -   [shiny](http://cran.rstudio.com/web/packages/shiny/index.html) (core)
 -   [SortableHTMLTables](http://cran.rstudio.com/web/packages/SortableHTMLTables/index.html)
 -   [sparktex](http://cran.rstudio.com/web/packages/sparktex/index.html)

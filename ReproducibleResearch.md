@@ -82,18 +82,8 @@ Markdown
 --------
 
 The <pkg>knitr</pkg> package can process markdown files without
-assistance into HTML, Microsoft Word, and PDF files. The packages <pkg>markdown</pkg> and <pkg>rmarkdown</pkg> have general tools for working with documents in markdown.
-<pkg>Kmisc</pkg> and <pkg>lazyWeave</pkg> can create markdown format
-documents from scratch. Also, the <pkg>ascii</pkg> package can write R
-objects to the [AsciiDoc](http://www.methods.co.nz/asciidoc/) format.
+assistance into HTML, Microsoft Word, and PDF files. The packages <pkg>markdown</pkg> and <pkg>rmarkdown</pkg> have general tools for working with documents in markdown. <pkg>Kmisc</pkg> and <pkg>lazyWeave</pkg> can create markdown format documents from scratch. Also, the <pkg>ascii</pkg> package can write R objects to the [AsciiDoc](http://www.methods.co.nz/asciidoc/) format.
 
-Tools for writing markdown documents:
-
--   <pkg>bookdown</pkg> allows for the production of multi-part documents (such as books) or single file documents (such as reports or articles). It has functions for figure and table captioning and cross-referencing, and citation handling. 
--   <pkg>rticles</pkg> provides for manuscripts and reports. It includes several popular journal manuscript templates   
--   <pkg>tufterhandout</pkg> and <pkg>tufte</pkg> contain templates and functions for creating Tufte-style handouts.
--   <pkg>papaja</pkg> ([GitHub only](https://github.com/crsh/papaja)) provides functions and templates for writing according to the American Psychological Association (APA) manuscript guidelines
--   <pkg>captioner</pkg> and <pkg>kfigr</pkg> provide functions for figure and table captions and cross-referencing in rmarkdown documents. 
 
 Object Conversion Functions:
 
@@ -129,31 +119,15 @@ Object Conversion Functions:
 
 -   *tables/cross-tabulations*: <pkg>apaStyle</pkg>
 
-Computational Environments
-===================
-
-For capturing the computational environment of an analysis, [rocker](https://github.com/rocker-org/) is a project that provides Docker containers to run R in a lightweight, isolated virtual environment. 
-
-The package <pkg>harbor</pkg> ([GitHub only](https://github.com/wch/harbor)) provides functions for controlling docker containers on local and remote hosts. <pkg>analogsea</pkg> has functions for deploying R and RStudio quickly & easily on DigitalOcean clusters using Docker images for cloud computing. The <pkg>dockertest</pkg> ([GitHub only](https://github.com/traitecoevo/dockertest)) and <pkg>containerit</pkg> ([GitHub only](https://github.com/o2r-project/containerit)) packages contains functions for generating Dockerfiles from R packages and other R projects, and building Docker containers that contains all the package dependencies.
-
 
 Miscellaneous Tools
 ===================
-
-Workflow Reproducibility
------------------------
-
-<pkg>remake</pkg> ([GitHub only](https://github.com/richfitz/remakepackage)) allows you to write makefile-like files entirely within R, to manage complex workflows reproducibly. 
+ 
 
 Package Reproducibility
 -----------------------
 
-R also has tools for ensuring that specific packages versions can be
-required for analyses. <pkg>packrat</pkg>, <pkg>checkpoint</pkg>, <pkg>rbundler</pkg>, and <pkg>GRANBase</pkg> install packages required for a project to a local
-archive as they existed at a specified point in time. This allows
-specific package versions to be maintained over time and different
-users. The <pkg>miniCRAN</pkg> and <pkg>drat</pkg> packages facilitate the creation of local
-CRAN-like repositories.
+R also has tools for ensuring that specific packages versions can be required for analyses. <pkg>packrat</pkg>, <pkg>checkpoint</pkg>, <pkg>rbundler</pkg> install packages required for a project to a local archive as they existed at a specified point in time. This allows specific package versions to be maintained over time and different users. <pkg>miniCRAN</pkg> facilitates the creation of local CRAN-like repositories.
 
 Formatting Tools
 ----------------
@@ -205,8 +179,4 @@ Non-literate programming packages to facilitating caching/archiving are
 -  [Kuhn: Sweave and the Open Document Format The odfWeave Package](http://www.R-project.org/doc/Rnews/Rnews_2006-4.pdf) 
 -  [Gorjanc: Using Sweave with LyX](http://www.R-project.org/doc/Rnews/Rnews_2008-1.pdf) 
 -  [Lecoutre: The R2HTML Package](http://www.R-project.org/doc/Rnews/Rnews_2003-3.pdf)
--  [RStudio: The rmarkdown package](http://rmarkdown.rstudio.com/)
--  [Gandrud: Reproducible Research with R/RStudio](https://github.com/christophergandrud/Rep-Res-Book)
--  [Xie: Dynamic Documents with R and knitr](https://github.com/yihui/knitr-book)
--  [Stodden, Miguez: Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research](http://dx.doi.org/10.5334/jors.ay)
 
