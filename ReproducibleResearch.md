@@ -92,7 +92,7 @@ Tools for writing markdown documents:
 -   <pkg>bookdown</pkg> allows for the production of multi-part documents (such as books) or single file documents (such as reports or articles). It has functions for figure and table captioning and cross-referencing, and citation handling. 
 -   <pkg>rticles</pkg> provides for manuscripts and reports. It includes several popular journal manuscript templates   
 -   <pkg>tufterhandout</pkg> and <pkg>tufte</pkg> contain templates and functions for creating Tufte-style handouts.
--   <pkg>papaja</pkg> ([GitHub only](https://github.com/crsh/papaja)) provides functions and templates for writing according to the American Psychological Association (APA) manuscript guidelines
+-   [papaja](https://github.com/crsh/papaja) (GitHub only) provides functions and templates for writing according to the American Psychological Association (APA) manuscript guidelines
 -   <pkg>captioner</pkg> and <pkg>kfigr</pkg> provide functions for figure and table captions and cross-referencing in rmarkdown documents. 
 
 Object Conversion Functions:
@@ -134,7 +134,7 @@ Computational Environments
 
 For capturing the computational environment of an analysis, [rocker](https://github.com/rocker-org/) is a project that provides Docker containers to run R in a lightweight, isolated virtual environment. 
 
-The package <pkg>harbor</pkg> ([GitHub only](https://github.com/wch/harbor)) provides functions for controlling docker containers on local and remote hosts. <pkg>analogsea</pkg> has functions for deploying R and RStudio quickly & easily on DigitalOcean clusters using Docker images for cloud computing. The <pkg>dockertest</pkg> ([GitHub only](https://github.com/traitecoevo/dockertest)) and <pkg>containerit</pkg> ([GitHub only](https://github.com/o2r-project/containerit)) packages contains functions for generating Dockerfiles from R packages and other R projects, and building Docker containers that contains all the package dependencies.
+[harbor](https://github.com/wch/harbor) (GitHub only) provides functions for controlling docker containers on local and remote hosts. <pkg>analogsea</pkg> has functions for deploying R and RStudio quickly & easily on DigitalOcean clusters using Docker images for cloud computing. The [dockertest](https://github.com/traitecoevo/dockertest) (GitHub only) and [containerit](https://github.com/o2r-project/containerit) (GitHub only) packages contains functions for generating Dockerfiles from R packages and other R projects, and building Docker containers that contains all the package dependencies.
 
 
 Miscellaneous Tools
@@ -143,7 +143,7 @@ Miscellaneous Tools
 Workflow Reproducibility
 -----------------------
 
-<pkg>remake</pkg> ([GitHub only](https://github.com/richfitz/remakepackage)) allows you to write makefile-like files entirely within R, to manage complex workflows reproducibly. 
+[remake](https://github.com/richfitz/remakepackage) (GitHub only) allows you to write makefile-like files entirely within R, to manage complex workflows reproducibly. 
 
 Package Reproducibility
 -----------------------
