@@ -36,3 +36,7 @@ If you don't want to or can't install these things, then just edit the `Reproduc
 ## Submit an issue
 
 If you just want to submit an issue, then go to the [issues page](https://github.com/topepo/Reproducible-Research-ctv/ReproducibleResearch.md/issues?state=open) and do that. Please list as much of the following as possible: package name, repository, development URL, description/details.
+
+## Acknowledgements
+
+This workflow for managing a CTV is taken directly from https://github.com/ropensci/webservices. Thanks to Thomas Leeper and the others working on that for making the scripts available, and documenting the process so well. 

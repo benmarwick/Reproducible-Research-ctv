@@ -84,7 +84,6 @@ Markdown
 The <pkg>knitr</pkg> package can process markdown files without
 assistance into HTML, Microsoft Word, and PDF files. The packages <pkg>markdown</pkg> and <pkg>rmarkdown</pkg> have general tools for working with documents in markdown. <pkg>Kmisc</pkg> and <pkg>lazyWeave</pkg> can create markdown format documents from scratch. Also, the <pkg>ascii</pkg> package can write R objects to the [AsciiDoc](http://www.methods.co.nz/asciidoc/) format.
 
-
 Object Conversion Functions:
 
 -   *summary tables/statistics*: <pkg>papeR</pkg>
@@ -120,9 +119,10 @@ Object Conversion Functions:
 -   *tables/cross-tabulations*: <pkg>apaStyle</pkg>
 
 
+
 Miscellaneous Tools
-===================
- 
+==========================
+
 
 Package Reproducibility
 -----------------------
