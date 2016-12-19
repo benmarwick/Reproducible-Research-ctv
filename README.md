@@ -6,7 +6,7 @@ CRAN Task View: Reproducible Research
 | | |
 |---|---|
 |-----------------|--------------------------------------------------------|
-| **Maintainer:** | Max Kuhn, Ben Marwick                                  |
+| **Maintainer:** | Max Kuhn                                               |
 | **Contact:**    | max.kuhn at pfizer.com                                 |
 | **Version:**    | 2016-12-15                                             |
 | **URL:**        | <https://CRAN.R-project.org/view=ReproducibleResearch> |
