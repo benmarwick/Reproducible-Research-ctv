@@ -11,7 +11,7 @@ output <-
 c(paste0('<CRANTaskView>
   <name>ReproducibleResearch</name>
   <topic>Reproducible Research</topic>
-  <maintainer email="max.kuhn@pfizer.com"> Max Kuhn, Ben Marwick</maintainer>
+  <maintainer email="max.kuhn@pfizer.com"> Max Kuhn</maintainer>
   <version>',Sys.Date(),'</version>'), 
   '  <info>',
   paste0("    ",template), 
