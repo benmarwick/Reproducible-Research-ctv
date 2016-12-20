@@ -1,10 +1,15 @@
 language: c
 language: r
+
+os:
+  - linux
+  - osx
+  
 sudo: required
+
 install:
   - sudo apt-get -y update
   # install latest pandoc release
   - wget `curl https://api.github.com/repos/jgm/pandoc/releases/latest | jq -r '.assets[] | .browser_download_url | select(endswith("deb"))'` -O pandoc.deb && sudo dpkg -i pandoc.deb && rm pandoc.deb
-
 
 script: make
