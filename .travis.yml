@@ -1,3 +1,7 @@
 language: c
 sudo: required
+addons:
+  apt_packages:
+    - pandoc
+
 script: make
