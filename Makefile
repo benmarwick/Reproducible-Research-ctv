@@ -9,7 +9,6 @@ ReproducibleResearch.html: ReproducibleResearch.ctv
 
 README.md: ReproducibleResearch.html
 	pandoc -w markdown_github -o README.md ReproducibleResearch.html
-	 $(__BREAKPOINT) 
 	sed -i.tmp -e 's|( \[|(\[|g' README.md
 	sed -i.tmp -e 's| : |: |g' README.md
 	sed -i.tmp -e 's|../packages/|http://cran.rstudio.com/web/packages/|g' README.md
@@ -33,6 +32,8 @@ diff:
 	git diff ReproducibleResearch.ctv > cran.diff
 	git checkout -- ReproducibleResearch.ctv
 	rm -r ./ctv
+	
+$(__BREAKPOINT) 
 
 # svn:
 #	svn checkout svn+ssh://xxx@svn.r-forge.r-project.org/svnroot/ctv/
