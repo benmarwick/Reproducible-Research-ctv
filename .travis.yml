@@ -1,4 +1,5 @@
 language: c
+language: r
 sudo: required
 install:
   - sudo apt-get -y update
